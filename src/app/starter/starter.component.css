@@ -1,0 +1,15 @@
+#question{
+  margin-top: 4%;
+  text-align: center;
+}
+
+.but{
+  text-align: center;
+  margin-top: 5%;
+}
+
+
+#img_format{
+    cursor: pointer;
+    max-width: 100%;
+}

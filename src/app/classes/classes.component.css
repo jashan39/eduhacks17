@@ -1,0 +1,46 @@
+.title{
+}
+
+.buttons{
+  text-align: center;
+  color:white;
+  padding: 4%;
+  background-image: url("../../assets/images/map.jpg");
+  font-size: 25px;
+}
+
+#header{
+  color: grey;
+  text-align: center;
+}
+
+.second_row{
+  margin-top: 5%;
+}
+
+#science{
+    margin-top: 15%;
+    margin-right: 30%;
+    background-color: rgb(58, 83, 155);
+}
+
+#math{
+    margin-top: 27%;
+    background-color: rgb(219, 10, 91);
+}
+
+#arts{
+  margin-left: 40%;
+  background-color: rgb(103, 65, 114);
+}
+
+#socials{
+  background-color: rgb(192, 57, 43);
+  margin-left: 35%;
+}
+
+
+.btn-primary.btn-lg{
+  height: 75px;
+  width: 100px;
+}

@@ -1,0 +1,61 @@
+<div class="card" *ngIf="lesson$ | async as lesson">
+    <div class="card-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" (click)="gotoLessons(lesson)" class="btn btn-light fa fa-angle-left"></button>
+                </div>
+            </div>
+            <div class="row justify-content-md-center header-img mt-5">
+                <img src="../../assets/images/sun.png" alt="Sun" />
+            </div>
+            <div class="row justify-content-md-center mt-5 mb-4">
+                <h3>The {{ lesson.name }}</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-block mt-5">
+        <div *ngIf="learn; else quiz" class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="../../assets/images/sun1.png" alt="sun with thermometer" class="pl-5" />
+                </div>
+                <div class="col">
+                    <p class="card-text">{{ lesson.description }}</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <p class="card-text">{{ lesson.description }}</p>
+                </div>
+                <div class="col">
+                    <img src="../../assets/images/sun2.png" alt="setting sun" class="pl-5" />
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center mt-5 mb-5">
+                <button type="button" class="btn btn-primary" (click)="learn = !learn">Start Quiz</button>
+            </div>
+
+        </div>
+
+        <ng-template #quiz>
+            <div *ngFor="let question of lesson.quiz" class="question-page">
+                <p>{{ question.id }}. {{ question.question }}</p>
+
+                <div class="btn-group selectBtn" data-toggle="buttons">
+                    <label class="btn btn-success active">
+                              <input type="radio" name="options" id="true" autocomplete="off"> True
+                            </label>
+                    <label class="btn btn-danger">
+                              <input type="radio" name="options" id="false" autocomplete="off"> False
+                            </label>
+                </div>
+            </div>
+
+            <button type="button" id="submit" class="btn btn-success" (click)="gotoLessons(lesson) ">Submit</button>
+        </ng-template>
+    </div>
+</div>

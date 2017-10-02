@@ -1,0 +1,25 @@
+.bg-blue{
+  background-color: lightcyan;
+}
+
+.bg-yellow{
+  background-color: lightgoldenrodyellow;
+}
+
+.bg-green{
+  background-color: lightgreen;
+}
+
+.custom-progress-bar {
+  height: 40px;
+}
+
+.flexbox-wrap{
+  display: flex;
+  align-items: center;
+}
+
+img{
+  max-width:100%;
+  max-height:100%;
+}

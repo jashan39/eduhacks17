@@ -1,0 +1,8 @@
+.planet-list{
+  list-style-type: none;
+}
+
+.pad-planet{
+  max-height: 200px;
+  max-width: 200px;
+}

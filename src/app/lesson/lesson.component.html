@@ -1,0 +1,31 @@
+<!-- lesson landing page -->
+<!-- solar system -->
+<div class="card" style="background-color: #333; border-color: #333;">
+  <!-- subject heading -->
+  <div class="card-header" style="background-color: #333; border-color: #333;">
+    <div class="text-center" style="color: white;">
+      <br>
+      <h1>Solar System</h1>
+      <br>
+    </div>
+  </div>
+
+  <div class="card-block">
+    <div class="row">
+      <!-- select lesson -->
+      <div class="lessons text-center mx-auto planet-list">
+        <div *ngFor="let lesson of lessons$ | async"
+             [class.selected]="lesson.id === selectedId" class="p-2">
+          <div>
+            <a [routerLink]="['/lesson', lesson.id]">
+              <div class="label p-5">
+                <img src="{{lessonImages[lesson.id]}}" class="pad-planet">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

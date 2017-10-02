@@ -1,3 +1,84 @@
-<p>
-  dashboard works!
-</p>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-3 col-12">
+      <img src="../../assets/images/girl_face.jpg" class="rounded-circle p-4">
+    </div>
+    <div class="flexbox-wrap text-muted col-md-9 col-12">
+      <span class="text-wrap">
+        <h3>{{student.firstName + ' ' + student.lastName}}</h3>
+        <h3>Homeroom {{student.homeroom}}</h3>
+        <h3>Student Number {{student.studentNum}}</h3>
+        <h3>Level {{student.level + ' - '}}{{student.flair}}</h3>
+      </span>
+    </div>
+  </div>
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8" pr-md-5>
+      <div class="col-12">
+        <div class="row card">
+          <div class="col-12">
+            <div class="card-block">
+              <h4>Upcoming Deadlines</h4>
+              <br>
+              <table class="table">
+                <thead>
+                  <th>Due</th>
+                  <th>Class</th>
+                  <th>Assignment</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let deadline of upcomingDeadlines">
+                    <td>{{deadline.date}}</td>
+                    <td>{{deadline.className}}</td>
+                    <td>{{deadline.assignment}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="row card">
+          <div class="col-12">
+            <div class="card-block">
+              <h4>Class Progress</h4>
+
+            </div>
+          </div>
+          <br>
+          <div class="offset-1 col-11">
+            <div *ngFor="let classMember of classesArray">
+              <a routerLink="/science"><h5>{{ classMember.name }}</h5></a>
+              <br>
+              <div class="progress">
+                <div class="progress-bar bg-info custom-progress-bar" role="progressbar" [ngStyle]="{'width': getProgWidth(classMember.name)+'%'}"></div>
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 offset-md-1 col-md-3 card">
+      <div class="row">
+        <div class="col-12">
+          <div class="card-block">
+            <h4>Awards Inventory</h4>
+            <br>
+            <div class="row flexbox-wrap">
+              <div class="col-4">
+                <img src="../../assets/images/coin.png" class="rounded-circle">
+              </div>
+              <div class="col-8">
+                <h5>x 10</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

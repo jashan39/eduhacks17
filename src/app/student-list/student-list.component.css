@@ -1,0 +1,22 @@
+h2 {
+  text-align: center;
+  color: grey;
+}
+
+.students{
+  padding: 2%;
+}
+
+#center_it{
+  text-align: center;
+}
+
+#text_con{
+  cursor: pointer;
+}
+
+#img_format{
+    cursor: pointer;
+    margin-top: 15%;
+    height: 200px;
+}
